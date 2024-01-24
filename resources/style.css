@@ -3,31 +3,90 @@ body {
 }
 
 /* BEGIN: Semantic HTML Elements */
-header {
+
+.title {
     background-color: lightblue;
+    outline: 1px solid black;
+    margin: 10px;
+    padding: 10px;
 }
 
-nav {
+/* Top Navigation Bar */
+.top-nav {
     background-color: lightgreen;
+    outline: 1px solid black;
+    margin: 10px;
+    padding: 10px;
 }
+    .top-nav-list {
+        background-color: lightgreen;
+        outline: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+    }
+/* END: Top Navigation Bar */
 
+/* Side Navigation Bar */
+.side-nav {
+    background-color: lightgreen;
+    outline: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+    .side-nav-list {
+        background-color: lightgreen;
+        outline: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+    }
+/* END: Side Navigation Bar */
+
+/* Main Content */
 main {
     background-color: lightyellow;
+    outline: 1px solid black;
+    margin: 10px;
+    padding: 10px;
 }
+    .project-container {
+        background-color: lightsalmon;
+        outline: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+    }
+        .project-tile {
+            background-color: lightpink;
+            outline: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+            .project-image {
+                background-color: lightpink;
+                outline: 1px solid black;
+                margin: 10px;
+                padding: 10px;
+            }
+            .project-description {
+                background-color: lightpink;
+                outline: 1px solid black;
+                margin: 10px;
+                padding: 10px;
+            }
+/* END: Main Content */
 
-article {
-    background-color: lightpink;
-}
-
-section {
-    background-color: lightsalmon;
-}
-
-aside {
-    background-color: lightpurple;
-}
-
+/* Footer */
 footer {
     background-color: lightorange;
+    outline: 1px solid black;
+    margin: 10px;
+    padding: 10px;
 }
+    .foooter-paragraph {
+        background-color: lightorange;
+        outline: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+    }
+/* END: Footer */
+
 /* END: Semantic HTML Elements */
