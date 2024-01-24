@@ -1,0 +1,33 @@
+body {
+    background-color: lightgray;
+}
+
+/* BEGIN: Semantic HTML Elements */
+header {
+    background-color: lightblue;
+}
+
+nav {
+    background-color: lightgreen;
+}
+
+main {
+    background-color: lightyellow;
+}
+
+article {
+    background-color: lightpink;
+}
+
+section {
+    background-color: lightsalmon;
+}
+
+aside {
+    background-color: lightpurple;
+}
+
+footer {
+    background-color: lightorange;
+}
+/* END: Semantic HTML Elements */

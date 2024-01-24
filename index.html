@@ -6,7 +6,7 @@
     <!-- Tab title -->
     <title>TonciZ</title>
     <!-- CSS linked-->
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/tonciz.github.io/resources/style.css">
 </head>
 <body>
 
@@ -17,8 +17,8 @@
     </header>
 
 <!-- Navigation -->
-    <nav >
-        <ul>
+    <nav class="top-nav" >
+        <ul class="top-nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About</a></li>
@@ -26,24 +26,29 @@
     </nav>
 
 <!-- Side navbar -->
-    <aside>
-        <div></div>
+    <aside class="side-nav">
+        <div>
+            <ul class="side-nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
     </aside>
 
 <!-- Main content -->
     <main>
         <h2>Projects</h2>
-        <article> <!-- Project 1 -->
+        <section class="project-container"> <!-- Project section -->
+        <article class="project-tile"> <!-- Project 1 -->
             <h3>Procject 1</h3>
-            <figure>Image</figure>
-            <p>Short description</p>
+            <figure class="project-image">Image</figure>
+            <p class="project-description">Short description</p>
         </article>
-        <article> <!-- Project 2 -->
+        <article class="project-tile"> <!-- Project 2 -->
             <h3>Procject 2</h3>
             <figure>Image</figure>
             <p>Short description</p>
-        <section>
-
         </section>
     </main>
 
