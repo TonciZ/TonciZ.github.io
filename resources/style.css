@@ -26,8 +26,8 @@ body {
     font-family: var(--font-primary);
     color: var(--text-color);
     line-height: 1.6;
-    background-color: var(--dark-color);
-    margin: 0;
+    background-color: var(--glass-bg); /* Updated background color */
+    margin: 20px; /* Added margins for spacing */
     padding: 0;
     transition: all 0.3s ease;
 }
@@ -202,6 +202,18 @@ margin: 0 auto 2rem;
     border-radius: 30px;
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Added depth with shadow */
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+    color: white;
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
     border: none;
     position: relative;
@@ -224,6 +236,9 @@ margin: 0 auto 2rem;
 }
 
 .btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Enhanced hover effect */
     background-color: var(--accent-color);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(29, 185, 84, 0.4);
