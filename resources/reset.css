@@ -1,0 +1,125 @@
+/* Reset CSS v2.0 | 20230825
+http://meyerweb.com/eric/tools/css/reset/ 
+License: none (public domain)
+Modified version with additional normalizations
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+
+/* Set core body defaults */
+html {
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+box-sizing: inherit;
+}
+
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove list styles */
+ol, ul {
+list-style: none;
+}
+
+/* Quotes */
+blockquote, q {
+quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+
+/* Tables */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* Links */
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* Images */
+img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+/* Forms */
+button,
+input,
+select,
+textarea {
+font: inherit;
+color: inherit;
+}
+
+/* Remove inner shadow in iOS inputs */
+input,
+textarea {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
+/* Remove highlight on mobile tap */
+button,
+input,
+select,
+textarea {
+-webkit-tap-highlight-color: transparent;
+}
+
+/* Make sure textareas without a set height don't collapse */
+textarea {
+min-height: 100px;
+resize: vertical;
+}
+
+/* Remove animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+* {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+}
+

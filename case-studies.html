@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Tonci Z - Testing Professional</title>
+    <link rel="stylesheet" href="./resources/reset.css">
+    <link rel="stylesheet" href="./resources/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tonci Z</h1>
+                <p>Testing Professional</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="case-studies.html" class="active">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Case Studies</h2>
+                <p>Detailed accounts of my testing projects and outcomes</p>
+            </div>
+        </section>
+
+        <section class="case-study">
+            <div class="container">
+                <h3>E-Commerce Platform Migration Testing</h3>
+                <div class="case-study-content">
+                    <div class="case-study-details">
+                        <h4>Project Description</h4>
+                        <p>Comprehensive testing for a major retail client migrating from a legacy e-commerce platform to a modern microservices architecture. The project involved validating functionality across checkout flows, user accounts, product catalog, and integration with third-party payment processors.</p>
+                        
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Ensuring data integrity during the migration of millions of customer records</li>
+                            <li>Maintaining backward compatibility with existing APIs</li>
+                            <li>Testing across 5 different payment gateways with unique integration requirements</li>
+                            <li>Tight timeline with holiday shopping season deadline</li>
+                        </ul>
+                        
+                        <h4>Solution</h4>
+                        <p>Implemented a multi-layered testing strategy including:</p>
+                        <ul>
+                            <li>Automated regression suite using Selenium and Cypress</li>
+                            <li>Performance testing with JMeter to simulate peak traffic conditions</li>
+                            <li>Data migration validation through custom SQL comparison scripts</li>
+                            <li>API contract testing to ensure compatibility</li>
+                        </ul>
+                        
+                        <h4>Outcome</h4>
+                        <p>Successfully launched the new platform with zero critical defects. Post-migration metrics showed:</p>
+                        <ul>
+                            <li>30% improvement in checkout conversion rate</li>
+                            <li>45% reduction in page load times</li>
+                            <li>99.99% uptime during peak holiday season</li>
+                            <li>Seamless customer experience with no reported data loss</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study">
+            <div class="container">
+                <h3>Mobile Banking Application Security Testing</h3>
+                <div class="case-study-content">
+                    <div class="case-study-details">
+                        <h4>Project Description</h4>
+                        <p>Conducted comprehensive security testing for a mobile banking application handling sensitive financial data and transactions. The focus was on identifying vulnerabilities in the authentication system, transaction processing, and data storage.</p>
+                        
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Complex multi-factor authentication mechanisms</li>
+                            <li>Strict compliance requirements (PCI-DSS, GDPR)</li>
+                            <li>Testing for both Android and iOS platforms</li>
+                            <li>Encrypted communication with multiple backend systems</li>
+                        </ul>
+                        
+                        <h4>Solution</h4>
+                        <p>Developed a security testing framework that included:</p>
+                        <ul>
+                            <li>Static code analysis using specialized security tools</li>
+                            <li>Penetration testing focusing on OWASP Mobile Top 10 vulnerabilities</li>
+                            <li>Session handling and authentication bypass attempts</li>
+                            <li>Data leakage testing in different application states</li>
+                            <li>Secure code review in collaboration with developers</li>
+                        </ul>
+                        
+                        <h4>Outcome</h4>
+                        <p>Identified and remediated:</p>
+                        <ul>
+                            <li>3 critical security vulnerabilities before release</li>
+                            <li>7 medium-risk issues related to data storage</li>
+                            <li>Improved security posture validated by independent audit</li>
+                            <li>Successful compliance certification on first attempt</li>
+                            <li>Implemented automated security scanning in CI/CD pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study">
+            <div class="container">
+                <h3>Healthcare System Integration Testing</h3>
+                <div class="case-study-content">
+                    <div class="case-study-details">
+                        <h4>Project Description</h4>
+                        <p>Led integration testing efforts for a healthcare provider implementing a new Electronic Health Record (EHR) system that needed to connect with existing laboratory, pharmacy, and billing systems.</p>
+                        
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Complex HL7 message format validation</li>
+                            <li>Strict HIPAA compliance requirements</li>
+                            <li>Testing with limited access to production-like data</li>
+                            <li>Integration with legacy systems with minimal documentation</li>
+                            <li>24/7 availability requirements during transition</li>
+                        </ul>
+                        
+                        <h4>Solution</h4>
+                        <p>Implemented a comprehensive testing approach:</p>
+                        <ul>
+                            <li>Created a virtualized test environment mimicking all integration points</li>
+                            <li>Developed custom test data generator for patient records</li>
+                            <li>Implemented automated API testing using Postman and custom scripts</li>
+                            <li>Conducted phased integration testing with increasing system complexity</li>
+                            <li>Performed extensive end-to-end workflow testing with clinician input</li>
+                        </ul>
+                        
+                        <h4>Outcome</h4>
+                        <p>The integration was completed successfully with:</p>
+                        <ul>
+                            <li>Zero patient data integrity issues</li>
+                            <li>Successful migration of over 50,000 patient records</li>
+                            <li>Reduced system downtime during transition (under 4 hours)</li>
+                            <li>Documented integration points for future system updates</li>
+                            <li>Created reusable test framework for future integration projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Tonci Z - All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
+
