@@ -304,23 +304,26 @@ gap: 2rem;
 }
 
 .expertise-card {
-background-color: var(--glass-bg);
-border-radius: 20px;
-padding: 2rem;
-margin: 0.75rem;
-box-shadow: var(--shadow);
-transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-backdrop-filter: blur(var(--blur-medium));
--webkit-backdrop-filter: blur(var(--blur-medium)); /* Glassmorphism */
-border: 1px solid var(--glass-border);
-position: relative;
-overflow: hidden;
+    background-color: var(--glass-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 0.75rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(var(--blur-medium));
+    -webkit-backdrop-filter: blur(var(--blur-medium));
+    border: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
 }
 
 .expertise-card:hover {
-transform: translateY(-12px);
-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(29, 185, 84, 0.2);
-border-color: var(--glass-border-hover);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(29, 185, 84, 0.2);
+    border-color: var(--glass-border-hover);
+    background-color: var(--glass-bg-lighter);
+    backdrop-filter: blur(var(--blur-large));
+    -webkit-backdrop-filter: blur(var(--blur-large));
 }
 
 .expertise-card::before {
