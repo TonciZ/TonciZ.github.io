@@ -122,7 +122,7 @@ nav a {
     text-decoration: none;
     color: var(--light-color);
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -201,7 +201,7 @@ margin: 0 auto 2rem;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
     border: none;
     position: relative;
@@ -283,7 +283,7 @@ gap: 2rem;
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Glassmorphism */
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -456,7 +456,7 @@ left: -10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
     padding: 25px 30px;
     background-color: var(--glass-bg);
@@ -497,7 +497,7 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
