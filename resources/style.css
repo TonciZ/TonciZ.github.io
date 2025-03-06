@@ -95,6 +95,7 @@ nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
+    border-radius: 8px;
 }
 nav li {
     margin: 0;
@@ -869,7 +870,7 @@ margin: 0 5px;
     nav ul {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         background-color: var(--glass-bg-darker);
         backdrop-filter: blur(var(--blur-medium));
         -webkit-backdrop-filter: blur(var(--blur-medium));
@@ -883,8 +884,8 @@ margin: 0 5px;
     }
     
     nav a {
-        padding: 0.5rem 0.7rem;
-        font-size: 0.9rem;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.85rem;
         text-align: center;
     }
     
@@ -895,8 +896,8 @@ margin: 0 5px;
 
 @media (max-width: 480px) {
     nav a {
-        padding: 0.4rem 0.5rem;
-        font-size: 0.8rem;
+        padding: 0.3rem 0.4rem;
+        font-size: 0.75rem;
     }
 }
 
