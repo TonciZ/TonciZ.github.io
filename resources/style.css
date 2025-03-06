@@ -881,9 +881,10 @@ margin: 0 5px;
     }
     
     nav {
-        padding: 0;
+        padding: 0.5rem 1rem;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
+        width: 100%;
     }
     
     nav ul {
@@ -905,11 +906,12 @@ margin: 0 5px;
         padding: 0;
         margin-top: 50px;
         border-bottom: 1px solid var(--glass-border);
+        box-shadow: var(--shadow);
     }
     
     nav.active ul {
         max-height: 300px;
-        padding-bottom: 10px;
+        padding: 1rem 0;
     }
     
     nav li {
@@ -932,6 +934,8 @@ margin: 0 5px;
     
     nav a {
         padding: 0.8rem 1.5rem;
+        width: 100%;
+        text-align: center;
     }
     
     .hamburger.active span:nth-child(1) {
