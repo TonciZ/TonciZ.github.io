@@ -162,18 +162,11 @@ nav a:hover::after, nav a.active::after {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
 }
-font-size: 2.2rem;
-margin-bottom: 1.5rem;
-}
 
 .hero p {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto 2rem;
-}
-font-size: 1.2rem;
-max-width: 800px;
-margin: 0 auto 2rem;
 }
 
 .btn {
@@ -181,32 +174,6 @@ margin: 0 auto 2rem;
     background-color: var(--secondary-color);
     color: white;
     padding: 0.9rem 2rem;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Added depth with shadow */
-    border: none;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-    color: white;
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
-    border: none;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 0.8rem 1.8rem;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 500;
@@ -219,9 +186,6 @@ margin: 0 auto 2rem;
 }
 
 .btn:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Enhanced hover effect */
     background-color: var(--accent-color);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(29, 185, 84, 0.4);
@@ -399,17 +363,10 @@ border-color: var(--glass-border-hover);
 .skill-bar {
     margin-bottom: 1.5rem;
 }
-margin-bottom: 1.5rem;
-}
-
 .skill-name {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-}
-display: flex;
-justify-content: space-between;
-margin-bottom: 0.5rem;
 }
 
 .skill-progress {
@@ -444,10 +401,6 @@ margin-bottom: 0.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
-position: relative;
-max-width: 1200px;
-margin: 0 auto;
-}
 
 .timeline::after {
     content: '';
@@ -467,11 +420,6 @@ margin: 0 auto;
     width: 50%;
     box-sizing: border-box;
 }
-padding: 10px 40px;
-position: relative;
-width: 50%;
-box-sizing: border-box;
-}
 
 .timeline-item::after {
     content: '';
@@ -485,55 +433,24 @@ box-sizing: border-box;
     box-shadow: 0 0 10px var(--secondary-color);
     transition: all 0.3s ease;
 }
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-    top: 15px;
-    z-index: 1;
-    box-shadow: 0 0 10px var(--secondary-color);
-    transition: all 0.3s ease;
-    position: absolute;
-    width: 20
 
 .left {
     left: 0;
-}
-left: 0;
 }
 
 .right {
     left: 50%;
 }
-left: 50%;
-}
 
 .left::after {
     right: -10px;
-}
-right: -10px;
 }
 
 .right::after {
     left: -10px;
 }
-left: -10px;
-}
 
 .timeline-content {
-    padding: 30px 35px;
-    background-color: var(--glass-bg);
-    position: relative;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    color: var(--text-color);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    }
     padding: 25px 30px;
     background-color: var(--glass-bg);
     position: relative;
@@ -556,33 +473,18 @@ left: -10px;
     color: var(--secondary-color);
     margin-bottom: 10px;
 }
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-padding: 20px 30px;
-background-color: white;
-position: relative;
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
 
 /* Case Studies */
 .case-study {
-margin-bottom: 3.5rem;
-background-color: var(--glass-bg);
-border-radius: 24px;
-overflow: hidden;
-box-shadow: var(--shadow);
-transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-border: 1px solid rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-}
-
-.case-study:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--hover-shadow);
-    border
+    margin-bottom: 3rem;
+    background-color: var(--glass-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur
     margin-bottom: 3rem;
     background-color: var(--glass-bg);
     border-radius: 20px;
@@ -834,19 +736,18 @@ body {
 }
 
 .case-study, .expertise-card, .contact-form {
-    box-shadow: none;
-    border: 1px solid #ddd;
-}
+box-shadow: none;
+border: 1px solid #ddd;
 }
 
 /* Development Banner */
 .dev-banner {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--accent-color);
-    color: white;
+    background-color: #ff9800;
+    color: #000;
     text-align: center;
     padding: 10px 0;
     font-weight: bold;
