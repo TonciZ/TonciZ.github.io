@@ -26,10 +26,16 @@ body {
     font-family: var(--font-primary);
     color: var(--text-color);
     line-height: 1.6;
-    background-color: var(--glass-bg); /* Updated background color */
-    margin: 20px; /* Added margins for spacing */
-    padding: 0;
+    background-color: var(--dark-color); /* Ensure non-white background */
+    margin: 0; /* Reset margin */
+    padding: 20px; /* Uniform padding */
     transition: all 0.3s ease;
+}
+
+/* Apply uniform padding and margin to all text elements */
+p, h1, h2, h3, h4, h5, h6, li {
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 0;
 }
     font-family: var(--font-primary);
     color: var(--text-color);
