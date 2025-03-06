@@ -318,8 +318,8 @@ gap: 2rem;
 }
 
 .expertise-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(29, 185, 84, 0.2);
+    transform: translateY(-12px) perspective(500px) rotateX(5deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 25px rgba(29, 185, 84, 0.3);
     border-color: var(--glass-border-hover);
     background-color: var(--glass-bg-lighter);
     backdrop-filter: blur(var(--blur-large));
@@ -344,6 +344,10 @@ gap: 2rem;
     position: relative;
     display: inline-block;
     padding-bottom: 8px;
+}
+
+.expertise-card p {
+    margin: 0.75rem 0;
 }
 
 .expertise-card h3::after {
@@ -835,7 +839,7 @@ body {
     max-width: none;
 }
 
-.case-study, .expertise-card, .contact-form {
+.case-study, .contact-form {
 box-shadow: none;
 border: 1px solid #ddd;
 }
