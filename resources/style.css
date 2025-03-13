@@ -169,6 +169,56 @@ nav a:hover::after, nav a.active::after {
     width: 80%;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    z-index: 1004;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: var(--light-color);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1003;
+    pointer-events: none;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background-color: var(--secondary-color);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: var(--secondary-color);
+}
+
 /* Responsive Design */
 @media (max-width: 770px) {
     header {
@@ -199,9 +249,69 @@ nav a:hover::after, nav a.active::after {
     }
 }
 
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    
+    nav {
+        padding: 15px 0;
+    }
+    
+    nav ul {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 250px;
+        height: 100vh;
+        background-color: var(--glass-bg-darker);
+        padding: 80px 0 30px;
+        transition: all 0.4s ease;
+        z-index: 1004;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-left: 1px solid var(--glass-border);
+    }
+    
+    nav.active ul {
+        right: 0;
+    }
+    
+    nav.active + .nav-overlay {
+        display: block;
+        pointer-events: auto;
+    }
+    
+    nav li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    nav a {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        display: inline-block;
+        z-index: 1005;
+        position: relative;
+    }
+    
+    body.menu-active {
+        overflow: hidden;
+    }
+}
+
 @media (max-width: 480px) {
     nav {
         top: 30px;
+    }
+    
+    .hamburger {
+        top: 8px;
     }
     
     nav a {
