@@ -24,9 +24,26 @@
     --blur-small: 5px;
     --blur-medium: 10px;
     --blur-large: 20px;
+
+    /* Typography Scale */
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-md: 1.125rem;   /* 18px */
+    --font-size-lg: 1.25rem;    /* 20px */
+    --font-size-xl: 1.5rem;     /* 24px */
+    --font-size-2xl: 2rem;      /* 32px */
+    --font-size-3xl: 2.8rem;    /* 45px */
+
+    /* Font Weights */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
 }
 body {
     font-family: var(--font-primary);
+    font-size: var(--font-size-base);
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--dark-color);
@@ -65,15 +82,15 @@ header {
     margin-top: 45px;
 }
 header h1 {
-    font-size: 2.8rem;
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-bold);
     margin-bottom: 0.5rem;
-    font-weight: 700;
     letter-spacing: 1px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 header h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-light);
     opacity: 0.9;
     color: var(--secondary-color);
 }
@@ -107,7 +124,8 @@ nav a {
     padding: 1rem 1.5rem;
     text-decoration: none;
     color: var(--light-color);
-    font-weight: 500;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-medium);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -215,7 +233,8 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-bold);
     color: var(--secondary-color);
     position: relative;
     display: inline-block;
@@ -438,6 +457,8 @@ margin: 2.5rem 0;
     position: relative;
     display: inline-block;
     padding-bottom: 8px;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-medium);
 }
 
 .skill-category h3::after {
@@ -484,6 +505,8 @@ margin: 2.5rem 0;
 .skill-info h4 {
     color: var(--secondary-color);
     margin-bottom: 0.75rem;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-medium);
 }
 
 .skill-level {
@@ -632,6 +655,8 @@ margin: 2.5rem 0;
     position: relative;
     display: inline-block;
     padding-bottom: 8px;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-medium);
 }
 
 .case-study h3::after {
@@ -678,7 +703,8 @@ margin: 2.5rem 0;
 }
 
 .page-banner h2 {
-    font-size: 2.2rem;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-bold);
     color: var(--secondary-color);
     margin-bottom: 1rem;
     position: relative;
@@ -702,6 +728,8 @@ margin: 2.5rem 0;
     max-width: 800px;
     margin: 0 auto;
     color: var(--text-color);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-regular);
 }
 
 /* Contact Form */
@@ -752,7 +780,8 @@ margin: 2.5rem 0;
 .contact-method h3 {
     color: var(--secondary-color);
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-medium);
 }
 
 .contact-method p {
@@ -797,6 +826,7 @@ margin: 2.5rem 0;
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    font-size: var(--font-size-base);
     font-weight: 500;
     color: var(--secondary-color);
 }
@@ -807,7 +837,7 @@ margin: 2.5rem 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     background-color: rgba(30, 30, 30, 0.6);
     color: var(--text-color);
     transition: all 0.3s ease;
@@ -969,7 +999,8 @@ margin: 0 5px;
     color: #000;
     text-align: center;
     padding: 12px 0;
-    font-weight: bold;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-medium);
     z-index: 1003;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
     border-bottom: 2px solid #e67700;
