@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
         document.body.classList.toggle("menu-active");
+        
+        // We've commented out the overlay in HTML, so we don't need to toggle it
+        // if (overlay) {
+        //     overlay.style.display = navMenu.classList.contains("active") ? "block" : "none";
+        // }
     }
     
     // Initialize the menu
@@ -23,11 +28,11 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add hamburger menu click event
         hamburger.addEventListener("click", toggleMenu);
         
-        // Add overlay click event if it exists
-        if (overlay) {
-            overlay.removeEventListener("click", toggleMenu);
-            overlay.addEventListener("click", toggleMenu);
-        }
+        // Add overlay click event if it exists - but we've commented it out
+        // if (overlay) {
+        //     overlay.removeEventListener("click", toggleMenu);
+        //     overlay.addEventListener("click", toggleMenu);
+        // }
         
         // Add click events to all navigation links
         navLinks.forEach(link => {
