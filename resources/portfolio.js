@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initFormValidation();
     initThemeToggle();
     initProjectFilters();
+    initGlassmorphicEffects();
+    addThicknessShadows();
 });
 
 /**
@@ -274,5 +276,109 @@ function initThemeToggle() {
             localStorage.setItem('theme', 'dark');
             themeToggle.innerHTML = '🌙';
         }
+    });
+}
+
+/**
+ * Enhanced glassmorphic effects with 3D movement
+ */
+function initGlassmorphicEffects() {
+    // Elements that will have 3D movement effect
+    const glassElements = document.querySelectorAll('.expertise-card, .skill-item, .project-card, .tool-item, .case-study');
+    
+    glassElements.forEach(element => {
+        // Add 3D movement on mouse move
+        element.addEventListener('mousemove', e => {
+            const rect = element.getBoundingClientRect();
+            const x = e.clientX - rect.left; // x position within the element
+            const y = e.clientY - rect.top; // y position within the element
+            
+            // Calculate rotation based on mouse position
+            // The closer to the edge, the more it rotates
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Calculate rotation (max 5 degrees)
+            const rotateY = ((x - centerX) / centerX) * 5;
+            const rotateX = ((centerY - y) / centerY) * 5;
+            
+            // Apply transform
+            element.style.transform = `translateY(-10px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            
+            // Add highlight effect based on mouse position
+            const shine = element.querySelector('.glass-shine') || document.createElement('div');
+            if (!shine.classList.contains('glass-shine')) {
+                shine.classList.add('glass-shine');
+                element.appendChild(shine);
+            }
+            
+            // Position the shine effect
+            shine.style.opacity = '0.15';
+            shine.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        
+        // Reset on mouse leave
+        element.addEventListener('mouseleave', () => {
+            element.style.transform = '';
+            const shine = element.querySelector('.glass-shine');
+            if (shine) {
+                shine.style.opacity = '0';
+            }
+        });
+    });
+    
+    // Add CSS for the glass shine effect
+    const style = document.createElement('style');
+    style.textContent = `
+        .glass-shine {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+            opacity: 0;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Add subtle floating animation to theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('mousemove', e => {
+            const rect = themeToggle.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateY = ((x - centerX) / centerX) * 15;
+            const rotateX = ((centerY - y) / centerY) * 15;
+            
+            themeToggle.style.transform = `translateY(-8px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        
+        themeToggle.addEventListener('mouseleave', () => {
+            themeToggle.style.transform = '';
+        });
+    }
+}
+
+/**
+ * Add thickness shadow elements to create 3D glass effect
+ */
+function addThicknessShadows() {
+    const glassElements = document.querySelectorAll('.expertise-card, .skill-item, .project-card, .tool-item, .case-study');
+    
+    glassElements.forEach(element => {
+        // Create thickness shadow element
+        const thicknessShadow = document.createElement('div');
+        thicknessShadow.classList.add('thickness-shadow');
+        element.appendChild(thicknessShadow);
     });
 } 
