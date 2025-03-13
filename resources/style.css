@@ -934,26 +934,27 @@ margin: 0 5px;
     .right {
         left: 0;
     }
-}
+
 
 /* Print Styles */
 @media print {
-nav, .btn, footer .social-links {
-    display: none;
-}
+    nav, .btn, footer .social-links {
+        display: none;
+    }
 
-body {
-    background-color: white;
-}
+    body {
+        background-color: white;
+    }
 
-.container {
-    width: 100%;
-    max-width: none;
-}
+    .container {
+        width: 100%;
+        max-width: none;
+    }
 
-.case-study, .contact-form {
-box-shadow: none;
-border: 1px solid #ddd;
+    .case-study, .contact-form {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
 }
 
 /* Development Banner */
