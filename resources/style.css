@@ -918,7 +918,8 @@ margin: 0 5px;
         padding: 0.5rem 0;
         width: 100%;
         position: fixed;
-        top: 45px;
+        top: 35px; /* Reduced to account for smaller dev banner */
+        z-index: 1004; /* Ensure nav is above the dev banner */
     }
     
     nav ul {
@@ -950,11 +951,25 @@ margin: 0 5px;
     .page-banner {
         margin-top: 1rem;
     }
+    
+    /* Mobile-friendly dev banner */
+    .dev-banner {
+        padding: 8px 0;
+        font-size: 0.9rem;
+        font-weight: var(--font-regular);
+        height: 35px; /* Fixed height to ensure consistency */
+        line-height: 20px; /* Center text vertically */
+        box-sizing: border-box;
+    }
 }
 
 @media (max-width: 480px) {
     header {
         margin-top: 80px; /* Further adjusted for even smaller nav */
+    }
+    
+    nav {
+        top: 30px; /* Further reduced for even smaller dev banner */
     }
     
     nav a {
@@ -963,8 +978,10 @@ margin: 0 5px;
     }
     
     .dev-banner {
-        padding: 8px 0;
-        font-size: 0.85rem;
+        padding: 6px 0;
+        font-size: 0.8rem;
+        height: 30px; /* Smaller fixed height for tiny screens */
+        line-height: 18px; /* Center text vertically */
     }
 }
 
@@ -1039,6 +1056,9 @@ margin: 0 5px;
     z-index: 1003;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
     border-bottom: 2px solid #e67700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Animation and JavaScript Enhancement Styles */
@@ -1311,7 +1331,10 @@ header h2 {
 
 /* Enhanced Hover Effects */
 .expertise-card:hover, .skill-item:hover, .timeline-content:hover, .case-study:hover, 
-.project-card:hover, .tool-item:hover, .contact-info:hover, .contact-form:hover {
+.project-card:hover, .tool-item:hover, .contact-info:hover, .contact-form:hover,
+.expertise-card.touch-active, .skill-item.touch-active, .timeline-content.touch-active, 
+.case-study.touch-active, .project-card.touch-active, .tool-item.touch-active, 
+.contact-info.touch-active, .contact-form.touch-active {
     transform: translateY(-10px) translateZ(10px) rotateX(5deg);
     box-shadow: var(--glass-depth-shadow-hover);
     border-color: var(--glass-border-hover);
@@ -1320,7 +1343,10 @@ header h2 {
 
 .expertise-card:hover::before, .skill-item:hover::before, .timeline-content:hover::before, 
 .case-study:hover::before, .project-card:hover::before, .tool-item:hover::before, 
-.contact-info:hover::before, .contact-form:hover::before {
+.contact-info:hover::before, .contact-form:hover::before,
+.expertise-card.touch-active::before, .skill-item.touch-active::before, .timeline-content.touch-active::before, 
+.case-study.touch-active::before, .project-card.touch-active::before, .tool-item.touch-active::before, 
+.contact-info.touch-active::before, .contact-form.touch-active::before {
     border-color: var(--glass-edge-hover);
     box-shadow: 
         inset 0 0 20px rgba(29, 185, 84, 0.1),
@@ -1346,7 +1372,10 @@ header h2 {
 
 .expertise-card:hover > .thickness-shadow, .skill-item:hover > .thickness-shadow, 
 .project-card:hover > .thickness-shadow, .tool-item:hover > .thickness-shadow, 
-.case-study:hover > .thickness-shadow {
+.case-study:hover > .thickness-shadow,
+.expertise-card.touch-active > .thickness-shadow, .skill-item.touch-active > .thickness-shadow, 
+.project-card.touch-active > .thickness-shadow, .tool-item.touch-active > .thickness-shadow, 
+.case-study.touch-active > .thickness-shadow {
     opacity: 1;
 }
 
@@ -1389,12 +1418,14 @@ header h2 {
     pointer-events: none;
 }
 
-.btn:hover, .filter-btn:hover, .filter-btn.active {
+.btn:hover, .filter-btn:hover, .filter-btn.active,
+.btn.touch-active, .filter-btn.touch-active {
     transform: translateY(-5px) translateZ(5px);
     box-shadow: var(--glass-depth-shadow-hover);
 }
 
-.btn:hover::before, .filter-btn:hover::before, .filter-btn.active::before {
+.btn:hover::before, .filter-btn:hover::before, .filter-btn.active::before,
+.btn.touch-active::before, .filter-btn.touch-active::before {
     border-color: var(--glass-edge-hover);
 }
 
@@ -1405,7 +1436,7 @@ nav a {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-nav a:hover, nav a.active {
+nav a:hover, nav a.active, nav a.touch-active {
     transform: translateY(-3px) translateZ(5px);
     text-shadow: 0 0 10px rgba(29, 185, 84, 0.7);
 }
@@ -1469,4 +1500,53 @@ main {
     padding-top: 1rem;
     position: relative;
     z-index: 1000;
+}
+
+/* Mobile Touch Support */
+@media (max-width: 1024px) {
+    /* Disable hover effects on touch devices to prevent sticky hover states */
+    .expertise-card:hover, .skill-item:hover, .timeline-content:hover, .case-study:hover, 
+    .project-card:hover, .tool-item:hover, .contact-info:hover, .contact-form:hover,
+    .btn:hover, .filter-btn:hover,
+    nav a:hover {
+        transform: none;
+        box-shadow: var(--shadow);
+        border-color: var(--glass-border);
+        background-color: var(--glass-bg);
+        text-shadow: none;
+    }
+    
+    .expertise-card:hover::before, .skill-item:hover::before, .timeline-content:hover::before, 
+    .case-study:hover::before, .project-card:hover::before, .tool-item:hover::before, 
+    .contact-info:hover::before, .contact-form:hover::before,
+    .btn:hover::before, .filter-btn:hover::before {
+        border-color: var(--glass-edge);
+        box-shadow: none;
+    }
+    
+    /* But keep active states working */
+    .expertise-card.touch-active, .skill-item.touch-active, .timeline-content.touch-active, 
+    .case-study.touch-active, .project-card.touch-active, .tool-item.touch-active, 
+    .contact-info.touch-active, .contact-form.touch-active {
+        transform: translateY(-10px) translateZ(10px) rotateX(5deg);
+        box-shadow: var(--glass-depth-shadow-hover);
+        border-color: var(--glass-border-hover);
+        background-color: var(--glass-bg-lighter);
+    }
+    
+    .btn.touch-active, .filter-btn.touch-active, nav a.touch-active {
+        transform: translateY(-5px) translateZ(5px);
+        box-shadow: var(--glass-depth-shadow-hover);
+    }
+}
+
+/* Touch Animation */
+@keyframes touch-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.touch-pulse {
+    animation: touch-pulse 0.5s ease-in-out;
 }
