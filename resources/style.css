@@ -92,7 +92,7 @@ header {
     box-shadow: var(--shadow);
     backdrop-filter: blur(var(--blur-medium));
     -webkit-backdrop-filter: blur(var(--blur-medium));
-    margin-top: 45px;
+    margin-top: 95px; /* Increased to accommodate fixed nav + dev banner */
 }
 header h1 {
     font-size: var(--font-size-3xl);
@@ -109,13 +109,16 @@ header h2 {
 }
 /* Navigation */
 nav {
-    background-color: var(--glass-bg);
+    background-color: var(--glass-bg-darker);
     backdrop-filter: blur(var(--blur-medium));
     -webkit-backdrop-filter: blur(var(--blur-medium));
     box-shadow: var(--shadow);
     border-bottom: 1px solid var(--glass-border);
-    position: sticky;
-    top: 45px;
+    position: fixed; /* Changed from sticky to fixed */
+    top: 45px; /* Position right below the dev banner */
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 1002;
     transition: all 0.3s ease;
 }
@@ -907,9 +910,15 @@ margin: 0 5px;
 
 /* Responsive Design */
 @media (max-width: 770px) {
+    header {
+        margin-top: 85px; /* Adjusted for smaller nav on mobile */
+    }
+    
     nav {
         padding: 0.5rem 0;
         width: 100%;
+        position: fixed;
+        top: 45px;
     }
     
     nav ul {
@@ -937,12 +946,25 @@ margin: 0 5px;
     nav a::after {
         bottom: -2px;
     }
+    
+    .page-banner {
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
+    header {
+        margin-top: 80px; /* Further adjusted for even smaller nav */
+    }
+    
     nav a {
         padding: 0.3rem 0.4rem;
         font-size: 0.75rem;
+    }
+    
+    .dev-banner {
+        padding: 8px 0;
+        font-size: 0.85rem;
     }
 }
 
@@ -1440,4 +1462,11 @@ nav a:hover, nav a.active {
         rgba(255, 255, 255, 0.3) 0%, 
         rgba(255, 255, 255, 0.1) 50%, 
         rgba(255, 255, 255, 0) 100%);
+}
+
+/* Main Content Area */
+main {
+    padding-top: 1rem;
+    position: relative;
+    z-index: 1000;
 }
