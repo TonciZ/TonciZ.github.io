@@ -57,7 +57,7 @@ header {
     padding: 2.5rem 0;
     text-align: center;
     position: relative;
-    z-index: 1002;
+    z-index: 1001;
     border-bottom: 2px solid var(--secondary-color);
     box-shadow: var(--shadow);
     backdrop-filter: blur(var(--blur-medium));
@@ -84,8 +84,9 @@ nav {
     -webkit-backdrop-filter: blur(var(--blur-medium));
     box-shadow: var(--shadow);
     border-bottom: 1px solid var(--glass-border);
-    position: relative;
-    z-index: 1000;
+    position: sticky;
+    top: 45px;
+    z-index: 1002;
     transition: all 0.3s ease;
 }
 
@@ -969,7 +970,7 @@ margin: 0 5px;
     text-align: center;
     padding: 12px 0;
     font-weight: bold;
-    z-index: 1001;
+    z-index: 1003;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
     border-bottom: 2px solid #e67700;
 }
