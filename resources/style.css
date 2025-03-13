@@ -320,159 +320,87 @@ section h2::after {
 
 /* Expertise Cards */
 .expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
-}
-
-/* Flexbox Container Styling */
-.flex-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-gap: 2rem;
-margin: 2.5rem 0;
-}
-
-.flex-item {
-flex: 0 1 calc(25% - 2rem);
-min-width: 220px;
-background-color: var(--glass-bg-lighter);
-border-radius: 16px;
-padding: 1.5rem;
-margin-bottom: 1rem;
-text-align: center;
-transition: all 0.3s ease;
-border: 1px solid var(--glass-border);
-backdrop-filter: blur(var(--blur-small));
--webkit-backdrop-filter: blur(var(--blur-small));
-box-shadow: var(--shadow);
-}
-
-.flex-item:hover {
-transform: translateY(-8px);
-box-shadow: var(--hover-shadow);
-border-color: var(--glass-border-hover);
-}
-
-/* Tools Container Styling - extends flex container */
-.tools-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-gap: 2rem;
-margin: 2.5rem 0;
-}
-.tool-item {
-    flex: 0 1 calc(25% - 2rem);
-    min-width: 220px;
-    background-color: var(--glass-bg-lighter);
-    border-radius: 20px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(var(--blur-small));
-    -webkit-backdrop-filter: blur(var(--blur-small));
-    box-shadow: var(--shadow);
-}
-
-.tool-item:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--hover-shadow);
-    border-color: var(--glass-border-hover);
-}
-
-@media (max-width: 770px) {
-    .flex-item, .tool-item {
-        flex: 0 1 calc(50% - 2rem);
-    }
-}
-
-.expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .expertise-card {
-    background-color: var(--glass-bg);
-    border-radius: 24px;
+    background: var(--card-bg);
+    border-radius: 15px;
     padding: 2rem;
-    margin: 0.75rem;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    backdrop-filter: blur(var(--blur-medium));
-    -webkit-backdrop-filter: blur(var(--blur-medium));
-    border: 2px solid var(--glass-border-hover);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Special styling for the first expertise card */
-.expertise-grid .expertise-card:first-child {
-    border-radius: 32px;
-    box-shadow: var(--intense-shadow);
-    border: 2px solid var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .expertise-card:hover {
-    transform: translateY(-12px) perspective(500px) rotateX(5deg);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 25px rgba(29, 185, 84, 0.3);
-    border-color: var(--glass-border-hover);
-    background-color: var(--glass-bg-lighter);
-    backdrop-filter: blur(var(--blur-large));
-    -webkit-backdrop-filter: blur(var(--blur-large));
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.expertise-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-    pointer-events: none;
-    z-index: 1;
+.expertise-card i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
 }
 
 .expertise-card h3 {
-    color: var(--secondary-color);
+    color: var(--text-color);
     margin-bottom: 1rem;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 8px;
-}
-
-.expertise-grid .expertise-card:first-child h3 {
-    margin-left: 15px;
-    margin-right: 15px;
+    font-size: 1.5rem;
 }
 
 .expertise-card p {
-    margin: 0.75rem 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.expertise-grid .expertise-card:first-child p {
-    margin-left: 15px;
-    margin-right: 15px;
+@media (max-width: 768px) {
+    .expertise-grid {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .expertise-card {
+        padding: 1.5rem;
+    }
+
+    .expertise-card i {
+        font-size: 2.5rem;
+    }
+
+    .expertise-card h3 {
+        font-size: 1.3rem;
+    }
 }
 
-.expertise-card h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 30px;
-    height: 2px;
-    background-color: var(--secondary-color);
-    transition: width 0.3s ease;
-    border-radius: 2px;
-}
+@media (max-width: 480px) {
+    .expertise-grid {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
 
-.expertise-card:hover h3::after {
-    width: 100%;
+    .expertise-card {
+        padding: 1rem;
+    }
+
+    .expertise-card i {
+        font-size: 2rem;
+    }
+
+    .expertise-card h3 {
+        font-size: 1.2rem;
+    }
 }
 
 /* Skills Section */
