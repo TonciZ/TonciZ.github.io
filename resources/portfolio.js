@@ -224,7 +224,7 @@ function initThemeToggle() {
     // Create theme toggle button
     const themeToggle = document.createElement('button');
     themeToggle.id = 'theme-toggle';
-    themeToggle.innerHTML = '🌙';
+    themeToggle.innerHTML = '☀️';
     themeToggle.setAttribute('aria-label', 'Toggle dark/light mode');
     themeToggle.classList.add('theme-toggle');
     
@@ -262,7 +262,8 @@ function initThemeToggle() {
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'light') {
         document.body.classList.add('light-theme');
-        themeToggle.innerHTML = '☀️';
+        themeToggle.innerHTML = '🌙';
+        themeToggle.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Darker background for light theme
     }
     
     // Toggle theme on click
@@ -271,10 +272,12 @@ function initThemeToggle() {
         
         if (document.body.classList.contains('light-theme')) {
             localStorage.setItem('theme', 'light');
-            themeToggle.innerHTML = '☀️';
+            themeToggle.innerHTML = '🌙';
+            themeToggle.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Darker background for light theme
         } else {
             localStorage.setItem('theme', 'dark');
-            themeToggle.innerHTML = '🌙';
+            themeToggle.innerHTML = '☀️';
+            themeToggle.style.backgroundColor = 'var(--glass-bg-darker)'; // Reset to default for dark theme
         }
     });
 }
